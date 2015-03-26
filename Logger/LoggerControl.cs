@@ -55,9 +55,17 @@ namespace Logger
             if (NewText != null) NewText(text);
         }
 
+        public void Clear()
+        {
+            Clear(0);
+        }
         public void Clear(bool ClearCount)
         {
-            if (ClearCount) Count = 0;
+            Clear(ClearCount ? 0 : Count);
+        }
+        public void Clear(int CountValue)
+        {
+            Count = CountValue;
             _builder.Clear();
             OutputTextBox.Clear();
         }

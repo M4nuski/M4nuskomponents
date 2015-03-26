@@ -20,10 +20,6 @@ namespace Logger
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             Logger.Clear(true);
