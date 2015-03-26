@@ -16,21 +16,17 @@ namespace Logger
             {
                 Logger.AddLine(textBox1.Text);
                 textBox1.Clear();
+                e.SuppressKeyPress = true;
             }
         }
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
-            {
-                Logger.AddText(textBox2.Text);
-                textBox2.Clear();
-            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Logger.Clear();
+            Logger.Clear(true);
         }
     }
 }
