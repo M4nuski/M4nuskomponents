@@ -8,6 +8,7 @@ namespace Logger
     public partial class LoggerControl : UserControl
     {
         private StringBuilder _builder = new StringBuilder();
+        private bool topmost = true;
         //TODO add logfile
 
         public delegate void LoggerEvent(string text);
@@ -49,9 +50,16 @@ namespace Logger
 
         public void AddLine(string text)
         {
+            if (!topmost)
+            {
+                _builder.AppendLine();
+            }
             appendStamps();
-            _builder.AppendLine(text);
+            _builder.Append(text);
             OutputTextBox.Text = _builder.ToString();
+            OutputTextBox.SelectionStart = OutputTextBox.TextLength;
+            OutputTextBox.ScrollToCaret();
+            topmost = false;
             if (NewText != null) NewText(text);
         }
 
@@ -65,6 +73,7 @@ namespace Logger
         }
         public void Clear(int CountValue)
         {
+            topmost = true;
             Count = CountValue;
             _builder.Clear();
             OutputTextBox.Clear();
