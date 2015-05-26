@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FlashButton.Properties
+namespace FlasherTest.Properties
 {
 
 

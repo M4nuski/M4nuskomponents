@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FlashButton
+namespace FlasherTest
 {
     public partial class ControlFlasher : Component
     {

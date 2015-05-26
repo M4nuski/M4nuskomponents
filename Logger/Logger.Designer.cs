@@ -1,4 +1,4 @@
-﻿namespace LoggerComponent
+﻿namespace LoggerTest
 {
     partial class Logger
     {

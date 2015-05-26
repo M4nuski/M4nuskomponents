@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace LoggerComponent
+namespace LoggerTest
 {
     public partial class Form1 : Form
     {

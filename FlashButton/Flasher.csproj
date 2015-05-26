@@ -50,21 +50,6 @@
     <Compile Include="ControlFlasher.Designer.cs">
       <DependentUpon>ControlFlasher.cs</DependentUpon>
     </Compile>
-    <Compile Include="FlashButton2.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FlashButton2.Designer.cs">
-      <DependentUpon>FlashButton2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FlashButton5.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="FlashButtonControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="FlashButtonControl.Designer.cs">
-      <DependentUpon>FlashButtonControl.cs</DependentUpon>
-    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,12 +58,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FlashButton2.resx">
-      <DependentUpon>FlashButton2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FlashButtonControl.resx">
-      <DependentUpon>FlashButtonControl.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

@@ -1,4 +1,4 @@
-﻿namespace FlashButton
+﻿namespace FlasherTest
 {
     partial class ControlFlasher
     {

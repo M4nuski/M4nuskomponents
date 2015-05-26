@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FlashButton
+namespace FlasherTest
 {
     public partial class Form1 : Form
     {
@@ -12,7 +11,7 @@ namespace FlashButton
             InitializeComponent();
             colorDialog1.Color = Color.Red;
 
-            flashButton51.FlashEnd += flashEnded;
+            //flashButton51.FlashEnd += flashEnded;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -24,7 +23,7 @@ namespace FlashButton
 
         private void flashEnded(object sender, EventArgs e)
         {
-            flashButton51.Text = "FlashButton";
+            //flashButton51.Text = "FlashButton";
         }
 
         private static int safeTextParse(string s)
@@ -44,31 +43,31 @@ namespace FlashButton
         private void button1_Click(object sender, EventArgs e)
         {
 
-            flashButton51.Text = "Flashing!";
-            flashButton51.Flash(colorDialog1.Color, safeTextParse(textBox1.Text));
+//flashButton51.Text = "Flashing!";
+           // flashButton51.Flash(colorDialog1.Color, safeTextParse(textBox1.Text));
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            flashButton51.CancelFlash();
+           controlFlasher1.CancelAllFlash();
         }
 
-
-        private void flashButton51_Click(object sender, EventArgs e)
-        {
-            Text = "Clicked!";
-        }
 
         private void button5_Click(object sender, EventArgs e)
         {
             controlFlasher1.Flash(button4, Color.Blue, 200);
             controlFlasher1.Flash(menuStrip1.Items[0].GetCurrentParent());
-            controlFlasher1.Flash(comboBox1, Color.Black, 2500);
+            controlFlasher1.Flash(comboBox1, colorDialog1.Color, safeTextParse(textBox1.Text));
         }
 
         private void controlFlasher1_FlashEnd(object sender, EventArgs e)
         {
             Text = "end of flash for " + sender.ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
