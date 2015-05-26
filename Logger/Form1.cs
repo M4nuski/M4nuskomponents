@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Logger
+namespace LoggerComponent
 {
     public partial class Form1 : Form
     {
@@ -14,7 +14,7 @@ namespace Logger
         {
             if (e.KeyCode == Keys.Enter)
             {
-                Logger.AddLine(textBox1.Text);
+                logger1.AddLine(textBox1.Text);
                 textBox1.Clear();
                 e.SuppressKeyPress = true;
             }
@@ -22,7 +22,7 @@ namespace Logger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Logger.Clear(true);
+            logger1.Clear(true);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Logger\Logger.csproj", "{5EDACCC7-8A38-4CC5-AA2E-EB185F245E65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerControl", "Logger\LoggerControl.csproj", "{5EDACCC7-8A38-4CC5-AA2E-EB185F245E65}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlashButton", "FlashButton\FlashButton.csproj", "{C75D8434-E5B4-44CF-91D2-41127372230F}"
 EndProject

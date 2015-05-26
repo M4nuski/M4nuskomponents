@@ -1,11 +1,12 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Logger
+namespace LoggerComponent
 {
-    public partial class LoggerControl : UserControl
+    public sealed partial class Logger : TextBox
     {
         private StringBuilder _builder = new StringBuilder();
         private bool topmost = true;
@@ -43,9 +44,35 @@ namespace Logger
         [Category("Appearance"), Description("Current message counter of the loggger.")]
         public int Count { get; set; }
 
-        public LoggerControl()
+        public Logger()
         {
             InitializeComponent();
+            Multiline = true;
+            Font = new Font("Lucida Console", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ScrollBars = ScrollBars.Both;
+            ReadOnly = true;
+        }
+
+        protected override void OnPaint(PaintEventArgs pe)
+        {
+            base.OnPaint(pe);
+        }
+
+        public new void Clear()
+        {
+            clear(0);
+        }
+
+        public void Clear(bool ResetLineCount)
+        {
+            clear(ResetLineCount ? 0 : Count);
+        }
+        private void clear(int CountValue)
+        {
+            topmost = true;
+            Count = CountValue;
+            _builder.Clear();
+            base.Clear();
         }
 
         public void AddLine(string text)
@@ -56,27 +83,11 @@ namespace Logger
             }
             appendStamps();
             _builder.Append(text);
-            OutputTextBox.Text = _builder.ToString();
-            OutputTextBox.SelectionStart = OutputTextBox.TextLength;
-            OutputTextBox.ScrollToCaret();
+            Text = _builder.ToString();
+            SelectionStart = TextLength;
+            ScrollToCaret();
             topmost = false;
             if (NewText != null) NewText(text);
-        }
-
-        public void Clear()
-        {
-            Clear(0);
-        }
-        public void Clear(bool ClearCount)
-        {
-            Clear(ClearCount ? 0 : Count);
-        }
-        public void Clear(int CountValue)
-        {
-            topmost = true;
-            Count = CountValue;
-            _builder.Clear();
-            OutputTextBox.Clear();
         }
 
         private void appendStamps()

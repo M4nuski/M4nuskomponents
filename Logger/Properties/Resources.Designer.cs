@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Logger.Properties
+namespace LoggerComponent.Properties
 {
 
 

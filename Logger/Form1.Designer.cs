@@ -1,4 +1,4 @@
-﻿namespace Logger
+﻿namespace LoggerComponent
 {
     partial class Form1
     {
@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.Logger = new Logger.LoggerControl();
+            this.logger1 = new Logger();
             this.SuspendLayout();
             // 
             // textBox1
@@ -54,33 +54,34 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Logger
+            // logger1
             // 
-            this.Logger.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.Logger.Count = 42;
-            this.Logger.CountStamp = true;
-            this.Logger.CountStampFormat = "D3";
-            this.Logger.DateStamp = true;
-            this.Logger.DateStampFormat = "yyyy-MM-dd";
-            this.Logger.Location = new System.Drawing.Point(0, 1);
-            this.Logger.Name = "Logger";
-            this.Logger.Size = new System.Drawing.Size(445, 257);
-            this.Logger.TabIndex = 0;
-            this.Logger.TimeStamp = true;
-            this.Logger.TimeStampFormat = "HH-mm-ss";
+            this.logger1.Count = 0;
+            this.logger1.CountStamp = true;
+            this.logger1.CountStampFormat = "D4";
+            this.logger1.DateStamp = true;
+            this.logger1.DateStampFormat = "yyyy-MM-dd";
+            this.logger1.Font = new System.Drawing.Font("Lucida Console", 9F);
+            this.logger1.Location = new System.Drawing.Point(12, 12);
+            this.logger1.Multiline = true;
+            this.logger1.Name = "logger1";
+            this.logger1.ReadOnly = true;
+            this.logger1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.logger1.Size = new System.Drawing.Size(424, 238);
+            this.logger1.TabIndex = 3;
+            this.logger1.TimeStamp = true;
+            this.logger1.TimeStampFormat = "HH-mm-ss";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 300);
+            this.Controls.Add(this.logger1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Logger);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Logger Test form";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -88,9 +89,9 @@
 
         #endregion
 
-        private LoggerControl Logger;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private Logger logger1;
     }
 }
 
