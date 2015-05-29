@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ImageControl
@@ -15,6 +9,22 @@ namespace ImageControl
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    imageControl1.SourceImage = new Bitmap(openFileDialog1.FileName);
+                    imageControl1.Focus();
+                }
+                catch (Exception ex)
+                {
+                    Text = ex.Message;
+                }
+            }
         }
     }
 }

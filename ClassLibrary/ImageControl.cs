@@ -36,6 +36,7 @@ namespace M4nuskomponents
                 {
                     sourceImage = value;
                     FitImageToControl();
+                    DoubleBuffered = true;
                 }
             }
         }

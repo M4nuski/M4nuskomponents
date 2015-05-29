@@ -24,5 +24,10 @@ namespace LoggerTest
         {
             logger1.Clear(true);
         }
+
+        private void logger1_NewText(string text)
+        {
+            Text = "NewText Event: " + text;
+        }
     }
 }

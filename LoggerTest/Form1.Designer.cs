@@ -30,7 +30,7 @@
         {
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.logger1 = new Logger();
+            this.logger1 = new M4nuskomponents.Logger();
             this.SuspendLayout();
             // 
             // textBox1
@@ -56,21 +56,26 @@
             // 
             // logger1
             // 
+            this.logger1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.logger1.Count = 0;
             this.logger1.CountStamp = true;
             this.logger1.CountStampFormat = "D4";
             this.logger1.DateStamp = true;
             this.logger1.DateStampFormat = "yyyy-MM-dd";
             this.logger1.Font = new System.Drawing.Font("Lucida Console", 9F);
-            this.logger1.Location = new System.Drawing.Point(12, 12);
+            this.logger1.HideSelection = false;
+            this.logger1.Location = new System.Drawing.Point(10, 10);
             this.logger1.Multiline = true;
             this.logger1.Name = "logger1";
             this.logger1.ReadOnly = true;
             this.logger1.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.logger1.Size = new System.Drawing.Size(424, 238);
+            this.logger1.Size = new System.Drawing.Size(425, 245);
             this.logger1.TabIndex = 3;
             this.logger1.TimeStamp = true;
             this.logger1.TimeStampFormat = "HH-mm-ss";
+            this.logger1.NewText += new M4nuskomponents.Logger.LoggerEvent(this.logger1_NewText);
             // 
             // Form1
             // 
@@ -91,7 +96,7 @@
 
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
-        private Logger logger1;
+        private M4nuskomponents.Logger logger1;
     }
 }
 
