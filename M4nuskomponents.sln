@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerControl", "Logger\Log
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flasher", "FlashButton\Flasher.csproj", "{C75D8434-E5B4-44CF-91D2-41127372230F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M4nuskomponents", "LoggerClassTest\M4nuskomponents.csproj", "{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageControl", "ImageControl\ImageControl.csproj", "{F5F249EE-67FA-42BA-9680-ACFED1A3636C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +23,14 @@ Global
 		{C75D8434-E5B4-44CF-91D2-41127372230F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C75D8434-E5B4-44CF-91D2-41127372230F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C75D8434-E5B4-44CF-91D2-41127372230F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5F249EE-67FA-42BA-9680-ACFED1A3636C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5F249EE-67FA-42BA-9680-ACFED1A3636C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5F249EE-67FA-42BA-9680-ACFED1A3636C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5F249EE-67FA-42BA-9680-ACFED1A3636C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
