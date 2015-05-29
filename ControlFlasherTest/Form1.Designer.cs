@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.button2 = new System.Windows.Forms.Button();
+            this.ColorSelectButton = new System.Windows.Forms.Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -40,19 +40,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.controlTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.controlFlasher1 = new FlasherTest.ControlFlasher(this.components);
+            this.controlFlasher1 = new M4nuskomponents.ControlFlasher();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // ColorSelectButton
             // 
-            this.button2.Location = new System.Drawing.Point(15, 70);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Color";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ColorSelectButton.Location = new System.Drawing.Point(15, 70);
+            this.ColorSelectButton.Name = "ColorSelectButton";
+            this.ColorSelectButton.Size = new System.Drawing.Size(75, 23);
+            this.ColorSelectButton.TabIndex = 1;
+            this.ColorSelectButton.Text = "Color";
+            this.ColorSelectButton.UseVisualStyleBackColor = true;
+            this.ColorSelectButton.Click += new System.EventHandler(this.ColorSelectButton_Click);
             // 
             // textBox1
             // 
@@ -89,7 +89,6 @@
             this.button4.TabIndex = 7;
             this.button4.Text = "Demo Button";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -135,8 +134,7 @@
             // 
             this.controlFlasher1.DefaultColor = System.Drawing.Color.Red;
             this.controlFlasher1.DefaultFlashDuration = 750;
-            this.controlFlasher1.FadeResolution = 10;
-            this.controlFlasher1.FlashEnd += new System.EventHandler(this.controlFlasher1_FlashEnd);
+            this.controlFlasher1.FadeResolution = 50;
             // 
             // Form1
             // 
@@ -149,7 +147,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.ColorSelectButton);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -163,7 +161,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button ColorSelectButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
@@ -173,8 +171,8 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem controlTestToolStripMenuItem;
-        private ControlFlasher controlFlasher1;
         private System.Windows.Forms.Timer timer1;
+        private M4nuskomponents.ControlFlasher controlFlasher1;
     }
 }
 

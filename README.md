@@ -11,3 +11,18 @@ PictureBox with built-in controls to be used with "usual" UX mouse controls for 
 
 # ControlFlasher
 Component for simple UI feedback. Call the component with default (designer-time) or on-the-fly values to flash/fade the background color of any Control-class component.
+
+i.e. :
+        private void ColorSelectButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                controlFlasher1.Flash(ColorSelectButton, Color.GreenYellow, 350);
+				theColor = colorDialog1.Color;
+            }
+            else
+            {
+                controlFlasher1.Flash(ColorSelectButton, Color.Red, 550);
+            }
+        }
+		

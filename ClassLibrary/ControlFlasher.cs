@@ -43,7 +43,6 @@ namespace M4nuskomponents
         {
             flashTimer.Interval = fadeResolution;
             flashTimer.Tick += flashTimertick;
-            flashTimer.Start();
         }
 
         private flashData FindOrCreate(Control control)
@@ -85,6 +84,7 @@ namespace M4nuskomponents
                     t.currentFlashTime = FlashDuration;
                     t.maxFlashTime = FlashDuration;
                 }
+                if (!flashTimer.Enabled) flashTimer.Start();
             }
         }
 
@@ -131,8 +131,8 @@ namespace M4nuskomponents
                 }
             }
 
-
             targets.RemoveAll(t => t.flashing == false);
+            if (targets.Count == 0) flashTimer.Stop();
         }
 
         private static Color Blend(Color sartColor, Color endColor, double ratio)

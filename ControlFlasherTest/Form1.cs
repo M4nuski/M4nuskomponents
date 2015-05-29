@@ -10,20 +10,6 @@ namespace FlasherTest
         {
             InitializeComponent();
             colorDialog1.Color = Color.Red;
-
-            //flashButton51.FlashEnd += flashEnded;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (colorDialog1.ShowDialog() == DialogResult.OK)
-            {
-            }
-        }
-
-        private void flashEnded(object sender, EventArgs e)
-        {
-            //flashButton51.Text = "FlashButton";
         }
 
         private static int safeTextParse(string s)
@@ -40,13 +26,6 @@ namespace FlasherTest
             return result;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-//flashButton51.Text = "Flashing!";
-           // flashButton51.Flash(colorDialog1.Color, safeTextParse(textBox1.Text));
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
            controlFlasher1.CancelAllFlash();
@@ -60,14 +39,16 @@ namespace FlasherTest
             controlFlasher1.Flash(comboBox1, colorDialog1.Color, safeTextParse(textBox1.Text));
         }
 
-        private void controlFlasher1_FlashEnd(object sender, EventArgs e)
+        private void ColorSelectButton_Click(object sender, EventArgs e)
         {
-            Text = "end of flash for " + sender.ToString();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                controlFlasher1.Flash(ColorSelectButton, Color.GreenYellow, 350);
+            }
+            else
+            {
+                controlFlasher1.Flash(ColorSelectButton, Color.Red, 550);
+            }
         }
     }
 }
