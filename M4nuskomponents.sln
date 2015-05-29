@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerControl", "Logger\LoggerControl.csproj", "{5EDACCC7-8A38-4CC5-AA2E-EB185F245E65}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "LoggerTest\LoggerControl.csproj", "{5EDACCC7-8A38-4CC5-AA2E-EB185F245E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flasher", "FlashButton\Flasher.csproj", "{C75D8434-E5B4-44CF-91D2-41127372230F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlFlasher", "ControlFlasherTest\Flasher.csproj", "{C75D8434-E5B4-44CF-91D2-41127372230F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M4nuskomponents", "LoggerClassTest\M4nuskomponents.csproj", "{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M4nuskomponents", "ClassLibrary\M4nuskomponents.csproj", "{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageControl", "ImageControl\ImageControl.csproj", "{F5F249EE-67FA-42BA-9680-ACFED1A3636C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageControl", "ImageControlTest\ImageControl.csproj", "{F5F249EE-67FA-42BA-9680-ACFED1A3636C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

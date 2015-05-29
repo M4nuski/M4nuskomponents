@@ -7,8 +7,8 @@
     <ProjectGuid>{46E4DB79-ABC7-41D0-8993-4EB5E12D32E3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LoggerClassTest</RootNamespace>
-    <AssemblyName>LoggerClassTest</AssemblyName>
+    <RootNamespace>M4nuskomponents</RootNamespace>
+    <AssemblyName>M4nuskomponents</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
