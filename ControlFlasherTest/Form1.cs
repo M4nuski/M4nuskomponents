@@ -34,7 +34,7 @@ namespace FlasherTest
 
         private void button5_Click(object sender, EventArgs e)
         {
-            controlFlasher1.Flash(button4, Color.Blue, 200);
+            controlFlasher1.Flash(button4, Color.Blue, 2000);
             controlFlasher1.Flash(menuStrip1.Items[0].GetCurrentParent());
             controlFlasher1.Flash(comboBox1, colorDialog1.Color, safeTextParse(textBox1.Text));
         }
@@ -49,6 +49,16 @@ namespace FlasherTest
             {
                 controlFlasher1.Flash(ColorSelectButton, Color.Red, 550);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            controlFlasher1.CancelFlash(comboBox1);
+        }
+
+        private void controlFlasher1_FlashEnd(object sender, EventArgs e)
+        {
+            label2.Text = "Last Control to end Flash: " + sender.GetType().Name;
         }
     }
 }

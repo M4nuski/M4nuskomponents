@@ -124,7 +124,7 @@ namespace M4nuskomponents
                 {
                     cancel(t);
                 }
-                else
+                else if (t.flashing)
                 {
                     t.targetControl.BackColor = Blend(t.flashColor, t.originalColor, (double)t.currentFlashTime / t.maxFlashTime);
                     t.targetControl.Refresh();
